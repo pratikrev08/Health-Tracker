@@ -214,7 +214,7 @@
     var workoutMinDate, workoutMaxDate;
 
     // load activity data
-    d3.csv("../data/activityData.csv", function(error, data) {
+    d3.csv("data/activityData.csv", function(error, data) {
       data.forEach(function(d) {
         d['@activeEnergyBurned'] = +d['@activeEnergyBurned'];
         d['@activeEnergyBurnedGoal'] = +d['@activeEnergyBurnedGoal']
@@ -246,7 +246,7 @@
     });
 
     // load record data
-    d3.csv("../data/recordData.csv", function(error, data) {
+    d3.csv("data/recordData.csv", function(error, data) {
       data.forEach(function(d) {
         d['@creationDate'] = formatDate(parseDateTimeZone(d['@creationDate']));
         // get Sleep Analysis and Audio Exposure data
@@ -338,7 +338,7 @@
     });
 
     // load workout data
-    d3.csv("../data/workoutData.csv", function(error, data) {
+    d3.csv("data/workoutData.csv", function(error, data) {
       data.forEach(function(d) {
         d['@creationDate'] = formatDate(parseDateTimeZone(d['@creationDate']));
         d['@duration'] = +d['@duration'];
